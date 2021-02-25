@@ -1,0 +1,12 @@
+#
+# This file includes the requirements for both node.js and react.
+# For node dependencies you can also see package.json
+#
+
+mongoose==5.11.18
+cors==2.8.5
+express==4.17.1
+dotenv==8.2.0
+nodemon==2.0.7
+@material-ui/core==4.11.3
+axios==0.21.1

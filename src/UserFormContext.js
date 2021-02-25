@@ -16,7 +16,7 @@ function ContextProvider ({children}) {
     email: "",
     occupation: "",
     city: "",
-    bio: ""
+    bio: "",
   })
   const [step, setStep] = useState(1)
   

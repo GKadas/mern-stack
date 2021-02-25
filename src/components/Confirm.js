@@ -14,7 +14,7 @@ function Confirm () {
   const {firstName, lastName, email, occupation, city, bio} = userData
 
   function Continue (e) {
-    e.preventDefault()
+    // e.preventDefault()
     nextStep()
   }
 
@@ -33,12 +33,10 @@ function Confirm () {
       bio: bio,
     }
     console.log(jsonObj)
-    console.log(firstName)
 
     axios.post("http://localhost:5000/users/add", jsonObj)
     .then(res => console.log(res.data))
-    .finally(Continue)  
-
+    .finally(Continue)
   }
 
   return (

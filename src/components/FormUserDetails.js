@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react";
+import React, {useState, useContext} from "react"
 import {Context} from "../UserFormContext"
 
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
@@ -11,6 +11,7 @@ import Button from '@material-ui/core/Button'
 export function FormUserDetails () {
 
   const {userData, step, values, handleChange, nextStep} = useContext(Context)
+  const {firstName, lastName, email} = userData
   
   function Continue (e) {
     e.preventDefault()
@@ -31,7 +32,7 @@ export function FormUserDetails () {
             label="First Name"
             name="firstName"
             onChange={handleChange}
-            defaultValue={userData.firstName}
+            defaultValue={firstName}
             margin="normal"
             fullWidth
           />
@@ -41,7 +42,7 @@ export function FormUserDetails () {
             label="Last Name"
             name="lastName"
             onChange={handleChange}
-            defaultValue={userData.lastName}
+            defaultValue={lastName}
             margin="normal"
             fullWidth
           />
@@ -51,7 +52,7 @@ export function FormUserDetails () {
             label="Email"
             name="email"
             onChange={handleChange}
-            defaultValue={userData.email}
+            defaultValue={email}
             margin="normal"
             fullWidth
           />

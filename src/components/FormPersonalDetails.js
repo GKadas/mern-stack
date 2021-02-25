@@ -1,15 +1,16 @@
-import React, {useState, useContext} from "react";
+import React, {useState, useContext} from "react"
 import {Context} from "../UserFormContext"
 
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import Dialog from '@material-ui/core/Dialog';
-import AppBar from '@material-ui/core/AppBar';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
+import Dialog from '@material-ui/core/Dialog'
+import AppBar from '@material-ui/core/AppBar'
+import TextField from '@material-ui/core/TextField'
+import Button from '@material-ui/core/Button'
 
 export function FormPersonalDetails () {
 
-  const {userData, step, values, handleChange, nextStep, prevStep} = useContext(Context)
+  const {userData, step, handleChange, nextStep, prevStep} = useContext(Context)
+  const {occupation, city, bio} = userData
   
   function Continue (e) {
     e.preventDefault()
@@ -35,7 +36,7 @@ export function FormPersonalDetails () {
             label="Occupation"
             name='occupation'
             onChange={handleChange}
-            defaultValue={values.occupation}
+            defaultValue={occupation}
             margin="normal"
             fullWidth
           />
@@ -45,7 +46,7 @@ export function FormPersonalDetails () {
             label="City"
             name="city"
             onChange={handleChange}
-            defaultValue={values.city}
+            defaultValue={city}
             margin="normal"
             fullWidth
           />
@@ -55,7 +56,7 @@ export function FormPersonalDetails () {
             label="Bio"
             name='bio'
             onChange={handleChange}
-            defaultValue={values. bio}
+            defaultValue={bio}
             margin="normal"
             fullWidth
           />
