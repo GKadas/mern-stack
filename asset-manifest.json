@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/GKadas/mern-stack/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/GKadas/mern-stack/static/js/main.c5429a3b.chunk.js",
+    "main.js.map": "/GKadas/mern-stack/static/js/main.c5429a3b.chunk.js.map",
+    "runtime-main.js": "/GKadas/mern-stack/static/js/runtime-main.b9a10706.js",
+    "runtime-main.js.map": "/GKadas/mern-stack/static/js/runtime-main.b9a10706.js.map",
+    "static/js/2.8af24bf9.chunk.js": "/GKadas/mern-stack/static/js/2.8af24bf9.chunk.js",
+    "static/js/2.8af24bf9.chunk.js.map": "/GKadas/mern-stack/static/js/2.8af24bf9.chunk.js.map",
+    "index.html": "/GKadas/mern-stack/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/GKadas/mern-stack/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.8af24bf9.chunk.js.LICENSE.txt": "/GKadas/mern-stack/static/js/2.8af24bf9.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/GKadas/mern-stack/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b9a10706.js",
+    "static/js/2.8af24bf9.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.c5429a3b.chunk.js"
+  ]
+}
