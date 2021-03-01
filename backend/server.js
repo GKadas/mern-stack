@@ -1,9 +1,22 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+var log4js = require('log4js');
 
 require('dotenv').config();
 
+log4js.configure({
+  appenders: {
+    console: { type: 'console' },
+    file: { type: 'file', filename: 'app.log' }
+  },
+  categories: {
+    app: { appenders: ['file'], level: 'info' },
+    default: { appenders: ['console'], level: 'info' }
+  }
+ });
+
+var logger = log4js.getLogger('app');
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -15,7 +28,8 @@ mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
 );
 const connection = mongoose.connection;
 connection.once('open', () => {
-  console.log("MongoDB database connection established successfully");
+  logger.info("MongoDB database connection established successfully");
+
 })
 
 const usersRouter = require('./routes/users');
@@ -23,5 +37,6 @@ const usersRouter = require('./routes/users');
 app.use('/users', usersRouter);
 
 app.listen(port, () => {
-    console.log(`Server is running on port: ${port}`);
+    logger.info(`Server is running on port: ${port}`);
+
 });
