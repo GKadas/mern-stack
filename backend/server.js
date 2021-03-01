@@ -1,9 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-var log4js = require('log4js');
 
-require('dotenv').config();
+var log4js = require('log4js');
+var config = require('config');
+var config = require('config').get('App');
+
+var dbHost = config.get('dbConfig.URI');
 
 log4js.configure({
   appenders: {
@@ -23,8 +26,7 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
+mongoose.connect(dbHost, { useNewUrlParser: true, useCreateIndex: true }
 );
 const connection = mongoose.connection;
 connection.once('open', () => {
